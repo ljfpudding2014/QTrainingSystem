@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/images/logo.png</file>
+        <file>res/images/sms_enable.png</file>
+        <file>res/images/home2_enable.png</file>
+        <file>res/images/information_enable.png</file>
+        <file>res/images/phonebook_enable.png</file>
+        <file>res/images/sdcard_enable.png</file>
+        <file>res/images/settings_enable.png</file>
+    </qresource>
+</RCC>
