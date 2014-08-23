@@ -1,0 +1,1 @@
+configure.exe -opensource -debug -shared -fast -qmake -stl -platform win32-g++ -no-qt3support -no-dbus -no-phonon -no-phonon-backend -no-webkit -no-libtiff -no-dsp -no-scripttools -no-libmng -no-openssl -no-opengl -qt-sql-mysql -qt-sql-sqlite -nomake examples -nomake demos -nomake docs -nomake tests 
