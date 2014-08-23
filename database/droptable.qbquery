@@ -1,0 +1,1 @@
+﻿drop table student_has_course, course_has_teacher,student,teacher,course,class;
