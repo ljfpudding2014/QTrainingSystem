@@ -1,0 +1,7 @@
+
+2014-8-23
+1 Before Build QT Source Code, you need to install ACtivePerl, because configure.exe need it to create or copy;
+2 install Mysql include and lib, we need to use mysql database;
+3 use correct mingw and gcc;
+4 some application need QWT, we need to build it also;
+5 some mingw source code has problem, this decided the version you use, maybe its OK, you need to google error;
