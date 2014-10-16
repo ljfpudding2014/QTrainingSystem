@@ -76,6 +76,7 @@ public:
 	
 public slots:
 	void CreateNewStudent();
+	void UserLogin();
 	
 //private:
     //Ui::MainWindow *ui;

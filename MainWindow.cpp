@@ -1,5 +1,8 @@
+#include <QMessageBox>
+
 #include "mainwindow.h"
 #include "StudentInfoDialog.h"
+#include "UserLogin.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)//,
@@ -8,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //ui->setupUi(this);
 	setupUi(this);
 	connect(actionCreateStudent, SIGNAL(triggered()), this, SLOT(CreateNewStudent()));	
+	connect(actionLogin, SIGNAL(triggered()), this, SLOT(UserLogin()));
 	
 }
 
@@ -199,8 +203,9 @@ void MainWindow::retranslateUi(QMainWindow *MainWindow)
         pushButton->setText(QApplication::translate("MainWindow", "\346\237\245\350\257\242", 0, QApplication::UnicodeUTF8));
         menu->setTitle(QApplication::translate("MainWindow", "\347\224\250\346\210\267", 0, QApplication::UnicodeUTF8));
         menuStudentManagement->setTitle(QApplication::translate("MainWindow", "\345\255\246\347\224\237\347\256\241\347\220\206", 0, QApplication::UnicodeUTF8));
-        menu_3->setTitle(QApplication::translate("MainWindow", "\347\263\273\347\273\237\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
-        menu_4->setTitle(QApplication::translate("MainWindow", "\346\224\266\350\264\271\347\256\241\347\220\206", 0, QApplication::UnicodeUTF8));
+        //menu_3->setTitle(QApplication::translate("MainWindow", "\347\263\273\347\273\237\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        menu_3->setTitle(tr("QuerySchedul"));
+		menu_4->setTitle(QApplication::translate("MainWindow", "\346\224\266\350\264\271\347\256\241\347\220\206", 0, QApplication::UnicodeUTF8));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0, QApplication::UnicodeUTF8));
   
 }
@@ -212,4 +217,13 @@ void MainWindow::CreateNewStudent()
 	
 	dlg.exec();
 
+}
+
+void MainWindow::UserLogin()
+{
+   UserLoginDialog dlg;
+   if ( dlg.exec() == 0 )
+   {
+     QMessageBox::warning(this, tr("Return value"), tr("Get Return"));
+   }
 }
