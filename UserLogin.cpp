@@ -1,3 +1,4 @@
+#include <QMessageBox>
 
 #include "UserLogin.h"
 
@@ -8,8 +9,8 @@ UserLoginDialog::UserLoginDialog(QWidget *parent) :
     //ui->setupUi(this);
 	setupUi(this);
 	
-	connect(actionConfirm, SIGNAL(clicked), this, SLOT(ConfirmDialog()));
-	connect(actionCancel, SIGNAL(clicked), this, SLOT(CancelDialog()));
+	connect(toolButtonConfirm, SIGNAL(clicked()), this, SLOT(ConfirmDialog()));
+	connect(toolButtonCancel, SIGNAL(clicked()), this, SLOT(CancelDialog()));
 	
 }
 
@@ -82,8 +83,11 @@ void UserLoginDialog::setupUi(QWidget * widget )
         gridLayout->addLayout(horizontalLayout_3, 2, 0, 1, 1);
 
 
-		actionConfirm = new QAction(this);
-		actionCancel = new QAction(this);
+		//actionConfirm = new QAction(this);
+		//actionCancel = new QAction(this);
+		
+		//toolButtonConfirm->addAction(actionConfirm);
+		//toolButtonCancel->addAction(actionCancel);
 		
         retranslateUi(this);
 
@@ -108,12 +112,13 @@ void UserLoginDialog::retranslateUi(QDialog *Dialog)
 
 void UserLoginDialog::ConfirmDialog()
 {
-    
-	done(0);
+	QString strUser = lineEditUsername->text();
+	if(strUser == "001")
+	  done(1);
 }
 
 void UserLoginDialog::CancelDialog()
 {
-
-
+  accept();
 }
+

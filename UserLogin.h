@@ -42,8 +42,7 @@ public:
     QToolButton *toolButtonConfirm;
     QToolButton *toolButtonCancel;
 
-	QAction *actionConfirm;
-	QAction *actionCancel;
+
 	
 private slots:
 

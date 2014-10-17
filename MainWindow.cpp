@@ -222,8 +222,8 @@ void MainWindow::CreateNewStudent()
 void MainWindow::UserLogin()
 {
    UserLoginDialog dlg;
-   if ( dlg.exec() == 0 )
+   if ( dlg.exec() == 1 )
    {
-     QMessageBox::warning(this, tr("Return value"), tr("Get Return"));
+     
    }
 }
